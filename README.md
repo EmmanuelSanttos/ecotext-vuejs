@@ -4,7 +4,7 @@
 Sistema educativo para conscientização e reutilização de resíduos têxteis em Campo Grande/MS
 
 ## 🚀 Demo Online
-[Em breve disponível](https://EmmanuelSanttos.github.io/ecotext-vuejs/)
+[🚀 Acesse o site online](https://emmanuelsanttos.github.io/ecotext-vuejs/)
 
 ## 📸 Screenshots
 ![Home](docs/screenshots/home.png) 
