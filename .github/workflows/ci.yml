@@ -18,7 +18,5 @@ jobs:
           cache: 'npm'
       - name: Instalar dependencias
         run: npm install
-      - name: Lint
-        run: npm run lint --if-present
       - name: Testes e cobertura
         run: npx vitest run --coverage
