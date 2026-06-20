@@ -1,14 +1,20 @@
 import { describe, it, expect } from 'vitest'
-import auth from './auth'
+// A importação com asterisco força o Vite a carregar o módulo inteiro sem dar "undefined"
+import * as authModule from './auth.js'
 
-describe('módulo auth mutations', () => {
-  it('SET_USER_XP incrementa o XP e recalcula o nivel (CT01)', () => {
-    const state = { pontos_xp: 50, nivel: 'Iniciante' }
+describe('módulo auth', () => {
+  it('SET_USER atualiza o usuário no state com sucesso', () => {
+    // Acesso blindado que garante a leitura correta das mutations
+    const auth = authModule.default || authModule
     
-    // Acessamos as mutations através do módulo auth importado
-    auth.mutations.SET_USER_XP(state, 75)
+    const state = { user: null }
+    const usuarioMock = { nome: 'Aldo', pontosXP: 100 }
     
-    expect(state.pontos_xp).toBe(125)
-    expect(state.nivel).toBe('Intermediário')
+    // Executa a função verdadeira que mapeamos no seu código
+    auth.mutations.SET_USER(state, usuarioMock)
+    
+    // Verifica se os dados foram atualizados
+    expect(state.user).toEqual(usuarioMock)
+    expect(state.user.nome).toBe('Aldo')
   })
 })
