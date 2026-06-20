@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '20.x'
           cache: 'npm'
-- name: Instalar dependencias
+      - name: Instalar dependencias
         run: npm install
       - name: Instalar pacote de cobertura
         run: npm install -D @vitest/coverage-v8
