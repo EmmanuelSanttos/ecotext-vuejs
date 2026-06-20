@@ -21,4 +21,4 @@ jobs:
       - name: Instalar pacote de cobertura
         run: npm install -D @vitest/coverage-v8
       - name: Testes e cobertura
-        run: npx vitest run --coverage --passWithNoTests
+        run: npx vitest run --coverage
